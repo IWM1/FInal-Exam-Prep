@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h2>Elderly Patients</h2>
+    <a href="/Home">Home</a>
+    <a href="/Patients">List of Patients</a>
+    <a href="/ElderlyPatients">Elderly Patients</a>
+    <table>
+        <thead>
+        <tr>
+            <th scope="col">Patient Number</th>
+            <th scope="col">is AnOutPatient</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Email Address</th>
+            <th scope="col">Contact PhoneNumber</th>
+            <th scope="col">Date Of Birth</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="patients : ${patients}">
+            <td th:text="${patients.patientNumber}"></td>
+            <td th:text="${patients.isAnOutPatient}"></td>
+            <td th:text="${patients.fullNames}"></td>
+            <td th:text="${patients.emailAddress}"></td>
+            <td th:text="${patients.contactPhoneNumber}"></td>
+            <td th:text="${patients.dateOfBirth}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
