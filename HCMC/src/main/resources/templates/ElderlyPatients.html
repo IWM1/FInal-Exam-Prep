@@ -22,13 +22,13 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="patients : ${patients}">
-            <td th:text="${patients.patientNumber}"></td>
-            <td th:text="${patients.isAnOutPatient}"></td>
-            <td th:text="${patients.fullNames}"></td>
-            <td th:text="${patients.emailAddress}"></td>
-            <td th:text="${patients.contactPhoneNumber}"></td>
-            <td th:text="${patients.dateOfBirth}"></td>
+        <tr th:each="elderlypatients : ${elderlypatients}">
+            <td th:text="${elderlypatients.patientNumber}"></td>
+            <td th:text="${elderlypatients.isAnOutPatient}"></td>
+            <td th:text="${elderlypatients.fullNames}"></td>
+            <td th:text="${elderlypatients.emailAddress}"></td>
+            <td th:text="${elderlypatients.contactPhoneNumber}"></td>
+            <td th:text="${elderlypatients.dateOfBirth}"></td>
         </tr>
         </tbody>
     </table>

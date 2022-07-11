@@ -24,8 +24,6 @@ public class PatientServiceImp implements PatientService {
     @Override
     public List<Patient> getElderlyPatient() {
         return patientRepository.findAll().stream().
-                filter(Patient -> Patient.getDateOfBirth().
-                        isBefore(LocalDate.of(1957, Month.JANUARY, 1))).
-                collect(Collectors.toList());
+                filter(Patient -> Patient.isElderly()).collect(Collectors.toList());
     }
 }

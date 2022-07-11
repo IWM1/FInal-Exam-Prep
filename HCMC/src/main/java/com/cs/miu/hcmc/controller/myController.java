@@ -33,7 +33,7 @@ public class myController {
         var elderlypatients = patientService.getElderlyPatient();
         var modelAndView =new ModelAndView();
         modelAndView.addObject("elderlypatients", elderlypatients);
-        modelAndView.setViewName("elderlypatients");
+        modelAndView.setViewName("ElderlyPatients");
         return modelAndView;
     }
 }

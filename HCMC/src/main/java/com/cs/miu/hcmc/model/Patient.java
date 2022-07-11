@@ -34,4 +34,8 @@ public class Patient {
     @Column(nullable = false)
     @NotBlank
     private LocalDate dateOfBirth;
+
+    public boolean isElderly(){
+        return (this.dateOfBirth.isBefore(LocalDate.now().minusYears(65l)));
+    }
 }
